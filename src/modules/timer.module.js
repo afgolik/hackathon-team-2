@@ -17,7 +17,9 @@ export class TimerModule extends Module {
         const timeArr = promptTime.split(':')
         let time = Number(timeArr[0]) * 60 + Number(timeArr[1])
 
-        if (time >= 3600) {
+        if (!time) {
+            alert('Введите время!')
+        } else if (time >= 3600) {
             alert('Введённое время должно быть менее 1 часа!')
         } else {
             startTimer()
