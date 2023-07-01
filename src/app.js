@@ -2,9 +2,9 @@ import './styles.css'
 import {ContextMenu} from "@/menu"
 import {BackgroundModule} from './modules/background.module'
 import {ClicksModule} from './modules/clicks.module'
+import {SoundModule} from "@/modules/sound.module"
 import {CursorModule} from "@/modules/cursor.module"
 import {TimerModule} from './modules/timer.module'
-import {SoundModule} from "@/modules/sound.module";
 
 const contextMenu = new ContextMenu('#menu')
 document.body.addEventListener('contextmenu', (e) => {
