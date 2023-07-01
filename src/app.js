@@ -1,6 +1,7 @@
 import './styles.css'
 import {ContextMenu} from "@/menu"
 import {BackgroundModule} from './modules/background.module'
+import { ClicksModule } from './modules/clicks.module'
 
 const contextMenu = new ContextMenu('#menu')
 document.body.addEventListener('contextmenu', (e) => {
@@ -21,9 +22,4 @@ function createModule(moduleClass, type, text){
 }
 
 createModule(BackgroundModule, 'backgroundColor', 'Случайный фон')
-
-
-
-
-
-
+createModule(ClicksModule, 'clicksModule', 'Аналитика кликов')
