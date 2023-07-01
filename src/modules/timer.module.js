@@ -12,6 +12,12 @@ export class TimerModule extends Module {
         pTimer.id = 'timer'
         divTimer.append(pTimer)
         document.body.append(divTimer)
+        pTimer.addEventListener('mouseenter', () => {
+            pTimer.style.cursor = 'pointer'
+        })
+        pTimer.addEventListener('click', () => {
+            divTimer.remove()
+        })
 
         const promptTime = prompt('Задайте время до 1 часа в формате 00:00 мин:сек')
         const separator = /([\:\-\.\,\/])/
