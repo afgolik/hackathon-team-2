@@ -1,8 +1,8 @@
 import './styles.css'
 import {ContextMenu} from "@/menu"
 import {BackgroundModule} from './modules/background.module'
-import { ClicksModule } from './modules/clicks.module'
-import {CursorModule} from "@/modules/cursor.module";
+import {ClicksModule} from './modules/clicks.module'
+import {CursorModule} from "@/modules/cursor.module"
 import {TimerModule} from './modules/timer.module'
 
 const contextMenu = new ContextMenu('#menu')
