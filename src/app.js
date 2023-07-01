@@ -2,6 +2,7 @@ import './styles.css'
 import {ContextMenu} from "@/menu"
 import {BackgroundModule} from './modules/background.module'
 import {ClicksModule} from './modules/clicks.module'
+import {SoundModule} from "@/modules/sound.module"
 import {CursorModule} from "@/modules/cursor.module"
 import {TimerModule} from './modules/timer.module'
 
@@ -25,6 +26,7 @@ function createModule(moduleClass, type, text, ...params){
 
 createModule(BackgroundModule, 'backgroundColor', 'Случайный фон')
 createModule(ClicksModule, 'clicksModule', 'Аналитика кликов')
+createModule(SoundModule, 'soundModule', 'Случайный звук')
 createModule(CursorModule, 'cursorModule', 'Сменить курсор', ['help', 'pointer', 'progress', 'wait', 'cell', 'no-drop', 'grab'])
 createModule(CursorModule, 'defaultCursorModule', 'Вернуть курсор', ['default'])
 createModule(TimerModule, 'timerModule', 'Таймер')
