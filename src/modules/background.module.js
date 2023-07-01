@@ -3,7 +3,7 @@ import {random} from '../utils'
 
 export class BackgroundModule extends Module {
 
-    constructor() {
+    constructor(type, text) {
         super(type, text)
         this.random = random
     }
