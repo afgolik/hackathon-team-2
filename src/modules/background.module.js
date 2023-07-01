@@ -15,6 +15,4 @@ export class BackgroundModule extends Module {
         const color = `rgb(${r}, ${g}, ${b})`
         document.body.style.backgroundColor = color
     }
-
-    // toHTML() {}
 }
