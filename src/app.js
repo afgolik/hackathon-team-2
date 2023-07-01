@@ -1,7 +1,9 @@
 import './styles.css'
 import {ContextMenu} from "@/menu"
 import {BackgroundModule} from './modules/background.module'
-import { ClicksModule } from './modules/clicks.module'
+import {ClicksModule} from './modules/clicks.module'
+import {CursorModule} from "@/modules/cursor.module"
+import {TimerModule} from './modules/timer.module'
 import {SoundModule} from "@/modules/sound.module";
 
 const contextMenu = new ContextMenu('#menu')
@@ -16,8 +18,8 @@ menu.addEventListener('click', (e) => {
     modules[e.target.dataset.type].trigger()
     contextMenu.close()
 })
-function createModule(moduleClass, type, text){
-    const module = new moduleClass(type, text)
+function createModule(moduleClass, type, text, ...params){
+    const module = new moduleClass(type, text, ...params)
     modules[type] = module
     contextMenu.add(module)
 }
@@ -25,3 +27,6 @@ function createModule(moduleClass, type, text){
 createModule(BackgroundModule, 'backgroundColor', 'Случайный фон')
 createModule(ClicksModule, 'clicksModule', 'Аналитика кликов')
 createModule(SoundModule, 'soundModule', 'Случайный звук')
+createModule(CursorModule, 'cursorModule', 'Сменить курсор', ['help', 'pointer', 'progress', 'wait', 'cell', 'no-drop', 'grab'])
+createModule(CursorModule, 'defaultCursorModule', 'Вернуть курсор', ['default'])
+createModule(TimerModule, 'timerModule', 'Таймер')
