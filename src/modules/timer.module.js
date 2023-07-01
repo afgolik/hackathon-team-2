@@ -24,8 +24,8 @@ export class TimerModule extends Module {
         }
 
         function startTimer() { 
-          setInterval(decreaseTime, 1000)
-          this.decreaseTime()
+            setInterval(decreaseTime, 1000)
+            decreaseTime()
         }
 
         function decreaseTime() {
@@ -42,8 +42,8 @@ export class TimerModule extends Module {
         }
 
         function overTime() {
-          pTimer.textContent = 'Всем пока!'
-          setTimeout(function() { divTimer.remove() }, 2000)
+            pTimer.textContent = 'Всем пока!'
+            setTimeout(function() { divTimer.remove() }, 2000)
         }
     }
 }
