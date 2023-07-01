@@ -7,16 +7,15 @@ export class TimerModule extends Module {
     }
 
     trigger() {
-        const divTimer = document.createElement('div');
-        const pTimer = document.createElement('p');
+        const divTimer = document.createElement('div')
+        const pTimer = document.createElement('p')
         pTimer.id = 'timer'
-        divTimer.append(pTimer);
-        document.body.append(divTimer);
+        divTimer.append(pTimer)
+        document.body.append(divTimer)
 
         const promptTime = prompt('Задайте время до 1 часа в формате 00:00 мин:сек')
         const separator = /([\:\-\.\,\/])/
         const timeArr = promptTime.split(separator)
-        console.log(timeArr)
         let time = Number(timeArr[0]) * 60 + Number(timeArr[2])
 
         if (!time) {
