@@ -1,22 +1,20 @@
 import {Module} from '../core/module'
-import { random } from '../utils'
+import {random} from '../utils'
 
 export class BackgroundModule extends Module {
-    #random
 
     constructor() {
-        this.#random = random
+        super(type, text)
+        this.random = random
     }
 
     trigger() {
-        r = random(0, 255)
-        g = random(0, 255)
-        b = random(0, 255)
-        color = `rgb(${r}, ${g}, ${b})`
-    }
-
-    toHTML() {
+        const r = this.random(0, 255)
+        const g = this.random(0, 255)
+        const b = this.random(0, 255)
+        const color = `rgb(${r}, ${g}, ${b})`
         document.body.style.backgroundColor = color
     }
 
+    // toHTML() {}
 }
