@@ -3,6 +3,7 @@ import {ContextMenu} from "@/menu"
 import {BackgroundModule} from './modules/background.module'
 import { ClicksModule } from './modules/clicks.module'
 import {CursorModule} from "@/modules/cursor.module";
+import {TimerModule} from './modules/timer.module'
 
 const contextMenu = new ContextMenu('#menu')
 document.body.addEventListener('contextmenu', (e) => {
@@ -26,3 +27,4 @@ createModule(BackgroundModule, 'backgroundColor', 'Случайный фон')
 createModule(ClicksModule, 'clicksModule', 'Аналитика кликов')
 createModule(CursorModule, 'cursorModule', 'Сменить курсор', ['help', 'pointer', 'progress', 'wait', 'cell', 'no-drop', 'grab'])
 createModule(CursorModule, 'defaultCursorModule', 'Вернуть курсор', ['default'])
+createModule(TimerModule, 'timerModule', 'Таймер')
