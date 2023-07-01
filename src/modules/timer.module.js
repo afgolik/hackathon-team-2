@@ -14,8 +14,10 @@ export class TimerModule extends Module {
         document.body.append(divTimer);
 
         const promptTime = prompt('Задайте время до 1 часа в формате 00:00 мин:сек')
-        const timeArr = promptTime.split(':')
-        let time = Number(timeArr[0]) * 60 + Number(timeArr[1])
+        let separator = /([\:\-\.\,\/])/
+        const timeArr = promptTime.split(separator)
+        console.log(timeArr)
+        let time = Number(timeArr[0]) * 60 + Number(timeArr[2])
 
         if (!time) {
             alert('Введите время!')
