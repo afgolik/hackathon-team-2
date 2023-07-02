@@ -6,7 +6,7 @@ export class PaintingModule extends Module{
     }
 
     trigger() {
-        alert('Нажми OK и можешь порисовать. Если устал рисовать, просто нажми Escape')
+        alert('Закрой это сообщение и начинай рисовать. Если устал рисовать, просто нажми Escape')
         const canvas = document.createElement('canvas')
         canvas.style.position = 'fixed'
         canvas.style.top = '0'

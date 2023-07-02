@@ -7,7 +7,7 @@ export class ClicksModule extends Module {
 
     trigger() {
         let countClicks = -1
-        alert('Как только ты нажмешь OK, у тебя будет ровно 3 секунды, чтобы показать за что ты способен!')
+        alert('Как только ты закроешь это сообщение, у тебя будет ровно 3 секунды, чтобы показать за что ты способен!')
         document.body.addEventListener('click', () => {
             countClicks++
         })

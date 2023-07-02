@@ -44,3 +44,7 @@ body {
 .logo-cat{
     margin: auto;
 }
+
+.loader{
+    text-align: center;
+}

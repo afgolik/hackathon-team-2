@@ -23,17 +23,31 @@ export class CatImage extends Module {
         divImg.append(img)
 
         async function getCat() {
+            toggleLoader()
             try {
                 const response = await fetch(`${catRandomUrl}/cat?json=true`)
                 const responseJson = await response.json()
                 return catRandomUrl + responseJson.url
             } catch (error) {
                 console.error("Ошибка!", error)
+            } finally {
+                toggleLoader()
             }
         }
 
         img.src = await getCat()
         document.body.append(divImg)
         setTimeout(function() {divImg.remove()},5000)
+
+        function toggleLoader(){
+            const loader = document.querySelector('#loader')
+            loader.textContent = 'Ожидаем котика...'
+            const isHidden = loader.hasAttribute('hidden')
+            if (isHidden){
+                loader.removeAttribute('hidden')
+            } else {
+                loader.setAttribute('hidden', '')
+            }
+        }
     }
 }
