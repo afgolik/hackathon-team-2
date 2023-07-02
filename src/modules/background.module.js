@@ -9,10 +9,14 @@ export class BackgroundModule extends Module {
     }
 
     trigger() {
+        document.body.style.backgroundColor = this.randomColor()
+    }
+
+    randomColor() {
         const r = this.random(0, 255)
         const g = this.random(0, 255)
         const b = this.random(0, 255)
         const color = `rgb(${r}, ${g}, ${b})`
-        document.body.style.backgroundColor = color
+        return color
     }
 }
