@@ -6,7 +6,7 @@ import {SoundModule} from "@/modules/sound.module"
 import {CursorModule} from "@/modules/cursor.module"
 import {TimerModule} from './modules/timer.module'
 import {ShapeModule} from './modules/shape.module'
-import { CustomMessageModule } from './modules/customMessage.module'
+import {CustomMessageModule} from './modules/customMessage.module'
 
 const contextMenu = new ContextMenu('#menu')
 document.body.addEventListener('contextmenu', (e) => {
