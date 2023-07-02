@@ -1,4 +1,3 @@
-import {Module} from '../core/module'
 import {random} from '../utils'
 import {BackgroundModule} from './background.module'
 
