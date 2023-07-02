@@ -6,10 +6,11 @@ export class ClicksModule extends Module {
     }
 
     trigger() {
-        let countClicks = -1
+        let countClicks = -1;
         alert('Как только ты нажмешь OK, у тебя будет ровно 3 секунды, чтобы показать за что ты способен!')
         document.body.addEventListener('click', (event) => {
             countClicks++
+            console.log(countClicks);
         })
         function letMessage(){
             if(countClicks > 0) {
