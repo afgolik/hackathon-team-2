@@ -1,4 +1,4 @@
-import {Module} from '../core/module'
+import {Module} from '@/core/module'
 
 export class TimerModule extends Module {
 
@@ -9,12 +9,11 @@ export class TimerModule extends Module {
     trigger() {
         const divTimer = document.createElement('div')
         const pTimer = document.createElement('p')
+        pTimer.style.cursor = 'pointer'
+        pTimer.style.display = 'inline-block'
         pTimer.id = 'timer'
         divTimer.append(pTimer)
         document.body.append(divTimer)
-        pTimer.addEventListener('mouseenter', () => {
-            pTimer.style.cursor = 'pointer'
-        })
         pTimer.addEventListener('click', () => {
             divTimer.remove()
         })
@@ -52,7 +51,7 @@ export class TimerModule extends Module {
 
         function overTime() {
             pTimer.textContent = 'Всем пока!'
-            setTimeout(function() { divTimer.remove() }, 2000)
+            setTimeout(function() {divTimer.remove()}, 2000)
         }
     }
 }
