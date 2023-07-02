@@ -12,6 +12,8 @@ body {
     height: 100vh;
     width: 100%;
     padding: 2rem;
+    display: flex;
+    /* justify-content: center; */
 }
 
 .menu {
@@ -39,4 +41,8 @@ body {
 
 .menu .menu-item:hover {
     background: #343434;
+}
+
+.logo-cat{
+    margin: auto;
 }
