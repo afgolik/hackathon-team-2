@@ -8,6 +8,7 @@ import {TimerModule} from '@/modules/timer.module'
 import {ShapeModule} from '@/modules/shape.module'
 import {CustomMessageModule} from '@/modules/customMessage.module'
 import { CatImage } from '@/modules/catimage.module'
+import {PaintingModule} from "@/modules/painting.module"
 
 const contextMenu = new ContextMenu('#menu')
 document.body.addEventListener('contextmenu', (e) => {
@@ -36,3 +37,4 @@ createModule(TimerModule, 'timerModule', 'Таймер')
 createModule(ShapeModule, 'shapeModule', 'Случайная фигура')
 createModule(CustomMessageModule, 'customMessageModule', 'Случайное сообщение')
 createModule(CatImage, 'catImage', 'Случайный котик')
+createModule(PaintingModule, 'paintingModule', 'Хочу порисовать')
