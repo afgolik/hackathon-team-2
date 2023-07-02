@@ -6,7 +6,7 @@ import {SoundModule} from "@/modules/sound.module"
 import {CursorModule} from "@/modules/cursor.module"
 import {TimerModule} from './modules/timer.module'
 import {ShapeModule} from './modules/shape.module'
-import { CustomMessageModule } from './modules/custommessage.module'
+import { CustomMessageModule } from './modules/customMessage.module'
 
 const contextMenu = new ContextMenu('#menu')
 document.body.addEventListener('contextmenu', (e) => {
@@ -33,4 +33,4 @@ createModule(CursorModule, 'cursorModule', 'Сменить курсор', ['help
 createModule(CursorModule, 'defaultCursorModule', 'Вернуть курсор', ['default'])
 createModule(TimerModule, 'timerModule', 'Таймер')
 createModule(ShapeModule, 'shapeModule', 'Случайная фигура')
-createModule(CustomMessageModule, 'custommessageModule', 'Кастомное сообщение')
+createModule(CustomMessageModule, 'customMessageModule', 'Случайное сообщение')
