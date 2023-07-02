@@ -1,9 +1,9 @@
 import {Module} from "@/core/module"
 import {random} from "@/utils"
 
-export class CursorModule extends Module{
+export class CursorModule extends Module {
     constructor(type, text, cursors) {
-        super(type, text);
+        super(type, text)
         this.cursors = cursors
     }
     trigger() {

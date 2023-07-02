@@ -51,7 +51,7 @@ export class TimerModule extends Module {
 
         function overTime() {
             pTimer.textContent = 'Всем пока!'
-            setTimeout(function() { divTimer.remove() }, 2000)
+            setTimeout(function() {divTimer.remove()}, 2000)
         }
     }
 }

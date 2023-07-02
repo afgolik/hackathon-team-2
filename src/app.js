@@ -7,7 +7,7 @@ import {CursorModule} from "@/modules/cursor.module"
 import {TimerModule} from '@/modules/timer.module'
 import {ShapeModule} from '@/modules/shape.module'
 import {CustomMessageModule} from '@/modules/customMessage.module'
-import { CatImage } from '@/modules/catimage.module'
+import {CatImage} from '@/modules/catImage.module'
 import {PaintingModule} from "@/modules/painting.module"
 
 const contextMenu = new ContextMenu('#menu')
@@ -22,7 +22,7 @@ menu.addEventListener('click', (e) => {
     modules[e.target.dataset.type].trigger()
     contextMenu.close()
 })
-function createModule(moduleClass, type, text, ...params){
+function createModule(moduleClass, type, text, ...params) {
     const module = new moduleClass(type, text, ...params)
     modules[type] = module
     contextMenu.add(module)
@@ -36,5 +36,5 @@ createModule(CursorModule, 'defaultCursorModule', 'Вернуть курсор',
 createModule(TimerModule, 'timerModule', 'Таймер')
 createModule(ShapeModule, 'shapeModule', 'Случайная фигура')
 createModule(CustomMessageModule, 'customMessageModule', 'Случайное сообщение')
-createModule(CatImage, 'catImage', 'Случайный котик')
+createModule(CatImage, 'catImage', 'Призвать котика')
 createModule(PaintingModule, 'paintingModule', 'Хочу порисовать')
