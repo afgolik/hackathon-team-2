@@ -2,12 +2,11 @@ import {Module} from '../core/module'
 import {random} from '../utils'
 import {BackgroundModule} from './background.module'
 
-export class ShapeModule extends Module {
+export class ShapeModule extends BackgroundModule {
 
     constructor(type, text) {
         super(type, text)
         this.random = random
-        this.randomColor = BackgroundModule.randomColor()
     }
 
     trigger() {
@@ -25,7 +24,7 @@ export class ShapeModule extends Module {
         shape.style.top = `${y}px`
         shape.style.left = `${x}px`
         shape.style.borderRadius = `${raduis}%`
-        shape.style.backgroundColor = this.randomColor
+        shape.style.backgroundColor = super.randomColor()
 
         document.body.append(shape)
         setTimeout(function() {shape.remove()}, 3000)
