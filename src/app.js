@@ -7,7 +7,7 @@ import {CursorModule} from "@/modules/cursor.module"
 import {TimerModule} from '@/modules/timer.module'
 import {ShapeModule} from '@/modules/shape.module'
 import {CustomMessageModule} from '@/modules/customMessage.module'
-import {CatImage} from '@/modules/catImage.module'
+import {CatImageModule} from '@/modules/catImage.module'
 import {PaintingModule} from "@/modules/painting.module"
 
 const contextMenu = new ContextMenu('#menu')
@@ -28,7 +28,7 @@ function createModule(moduleClass, type, text, ...params) {
     contextMenu.add(module)
 }
 
-createModule(BackgroundModule, 'backgroundColor', 'Случайный фон')
+createModule(BackgroundModule, 'backgroundModule', 'Случайный фон')
 createModule(ClicksModule, 'clicksModule', 'Аналитика кликов')
 createModule(SoundModule, 'soundModule', 'Случайный звук')
 createModule(CursorModule, 'cursorModule', 'Сменить курсор', ['help', 'pointer', 'progress', 'wait', 'cell', 'no-drop', 'grab'])
@@ -36,5 +36,5 @@ createModule(CursorModule, 'defaultCursorModule', 'Вернуть курсор',
 createModule(TimerModule, 'timerModule', 'Таймер')
 createModule(ShapeModule, 'shapeModule', 'Случайная фигура')
 createModule(CustomMessageModule, 'customMessageModule', 'Случайное сообщение')
-createModule(CatImage, 'catImage', 'Призвать котика')
+createModule(CatImageModule, 'catImageModule', 'Призвать котика')
 createModule(PaintingModule, 'paintingModule', 'Хочу порисовать')
