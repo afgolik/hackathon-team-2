@@ -1,12 +1,12 @@
-import './styles.css'
+import '@/styles.css'
 import {ContextMenu} from "@/menu"
-import {BackgroundModule} from './modules/background.module'
-import {ClicksModule} from './modules/clicks.module'
+import {BackgroundModule} from '@/modules/background.module'
+import {ClicksModule} from '@/modules/clicks.module'
 import {SoundModule} from "@/modules/sound.module"
 import {CursorModule} from "@/modules/cursor.module"
-import {TimerModule} from './modules/timer.module'
-import {ShapeModule} from './modules/shape.module'
-import {CustomMessageModule} from './modules/customMessage.module'
+import {TimerModule} from '@/modules/timer.module'
+import {ShapeModule} from '@/modules/shape.module'
+import {CustomMessageModule} from '@/modules/customMessage.module'
 
 const contextMenu = new ContextMenu('#menu')
 document.body.addEventListener('contextmenu', (e) => {

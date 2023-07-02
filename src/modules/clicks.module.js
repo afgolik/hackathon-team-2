@@ -1,4 +1,4 @@
-import {Module} from '../core/module'
+import {Module} from '@/core/module'
 
 export class ClicksModule extends Module {
     constructor(type, text) {
@@ -10,7 +10,6 @@ export class ClicksModule extends Module {
         alert('Как только ты нажмешь OK, у тебя будет ровно 3 секунды, чтобы показать за что ты способен!')
         document.body.addEventListener('click', (event) => {
             countClicks++
-            console.log(countClicks);
         })
         function letMessage(){
             if(countClicks > 0) {
